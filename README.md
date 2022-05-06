@@ -12,30 +12,30 @@ Steps & Commands
  
  
  Use Docker Compose
- Kill running container:
-docker rm <containerId>
+	 Kill running container:
+	 docker rm <containerId>
   
   
   docker-compose.yml
   
- version: "3"
-services:
-  sanjaymongodb:
-    image: mongo:latest
-    container_name: "sanjaymongodb"
-    ports:
-      - 27017:27017
-    environment: 
-       MONGO_INITDB_ROOT_USERNAME: #your mongodb username
-       MONGO_INITDB_ROOT_PASSWORD: #your mongodb password
-       MONGO_INITDB: admin
-    restart: always
-    volumes:
-      - /home/data/db:/data/db
-  springboot-mongodb:
-    image: springboot-mongodb:1.0
-    container_name: springboot-mongodb
-    ports:
-      - 8080:8080
-    links:
-      - sanjaymongodb
+	version: "3"
+	services:
+	  sanjaymongodb:
+		image: mongo:latest
+		container_name: "sanjaymongodb"
+		ports:
+		  - 27017:27017
+		environment: 
+		   MONGO_INITDB_ROOT_USERNAME: #your mongodb username
+		   MONGO_INITDB_ROOT_PASSWORD: #your mongodb password
+		   MONGO_INITDB: admin
+		restart: always
+		volumes:
+		  - /home/data/db:/data/db
+	  springboot-mongodb:
+		image: springboot-mongodb:1.0
+		container_name: springboot-mongodb
+		ports:
+		  - 8080:8080
+		links:
+		  - sanjaymongodb
