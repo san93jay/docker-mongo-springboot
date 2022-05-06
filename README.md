@@ -11,7 +11,8 @@ springBootWothMongodbandDocker
 	 check logs of spring boot image docker logs springboot-mongodb
  
  
- Use Docker Compose
+  Use Docker Compose
+  
 	 Kill running container:
 	 docker rm <containerId>
   
