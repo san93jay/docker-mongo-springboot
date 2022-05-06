@@ -12,13 +12,11 @@ Steps & Commands
  
  
  Use Docker Compose
-
  Kill running container:
 docker rm <containerId>
   
   
   docker-compose.yml
-  
   
  version: "3"
 services:
@@ -37,9 +35,6 @@ services:
   springboot-mongodb:
     image: springboot-mongodb:1.0
     container_name: springboot-mongodb
-#    build:
-#         context: .
-#         dockerfile: dockerfile
     ports:
       - 8080:8080
     links:
