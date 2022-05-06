@@ -40,3 +40,5 @@ springBootWothMongodbandDocker
 		  - 8080:8080
 		links:
 		  - sanjaymongodb
+   navigate to project folder:
+        /mongodbproject and run docker-compose -f docker-compose.yml up --build
